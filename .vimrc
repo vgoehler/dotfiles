@@ -88,7 +88,7 @@ set ai
 set si
 
 " vim notes
-:let g:notes_directories = ['~/Documents/Notes', '~/Dropbox/SharedNotes']
+:let g:notes_directories = ['~/Documents/Notes', '~/CloudStorage/Mega/SharedNotes']
 :let g:notes_suffix = '.txt'
 :let g:notes_title_sync = 'yes'
 :let g:notes_markdown_program = 'pandoc'
