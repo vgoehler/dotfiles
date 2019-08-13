@@ -48,6 +48,12 @@ font pango:System San Francisco Display 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+
+##################################################
+#   Display Setup !
+##################################################
+exec ~/.screenlayout/laptop_screen_chooser.sh
+
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec sakura
@@ -115,16 +121,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Browser"
-set $ws2 "2:Email"
-set $ws3 "3:Chat"
-set $ws4 "4"
+set $ws1 "1:Browser "
+set $ws2 "2:Email "
+set $ws3 "3:Chat "
+set $ws4 "4:Reading "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9:Security"
-set $ws10 "10:Music"
+set $ws9 "9:Security "
+set $ws10 "10:Music "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -155,12 +161,21 @@ assign [class="Vivaldi-stable"] $ws1
 assign [class="Evolution"] $ws2
 assign [class="Rocket.Chat"] $ws3
 assign [class="KeePass2"] $ws9
+assign [class="Spotify"] $ws10
 assign [title="Spotify Premium"] $ws10
+for_window [class="Spotify"] move to workspace $ws10
+assign [class="polar-bookshelf"] $ws4
+assign [class="Mendeley Desktop"] $ws4
+
+# float mode for some dialogs
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 
 # workspace opens on screen
 workspace $ws1 output DP-2-3 eDP-1
 workspace $ws2 output DP-2-2 eDP-1
 workspace $ws3 output eDP-1
+workspace $ws4 output DP-2-2 eDP-1
 workspace $ws9 output DP-2-2 eDP-1
 workspace $ws10 output eDP-1
 
@@ -258,9 +273,10 @@ bindsym XF86AudioPrev exec playerctl previous
 # exec program
 # exec_always program
 exec_always feh --bg-scale ~/Pictures/wallpaper/matrix_vader.jpg
-exec_always ~/.screenlayout/laptop_screen_chooser.sh
 exec_always compton -f
+exec_always --no-startup-id numlockx on
 
+exec --no-startup-id nm-applet
 exec spotify
 exec evolution
 exec vivaldi
@@ -271,3 +287,23 @@ exec keepass2
 exec nextcloud
 exec megasync
 exec odrive
+
+##################################################
+#       Power Down Menu
+##################################################
+
+# Restart or shutdown or suspend by using WinKey+Pause key with menu to select option
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/sources/assorted-tools/activatelock.sh, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id ~/sources/assorted-tools/activatelock.sh && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id ~/sources/assorted-tools/activatelock.sh && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
+
