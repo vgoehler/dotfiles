@@ -232,7 +232,7 @@ bar {
 }
 
 # my own bindings
-bindsym $mod+shift+x exec i3lock --color "$base01"
+bindsym $mod+shift+x exec ~/sources/assorted-tools/activatelock.sh
 bindsym Print exec flameshot gui -p ~/Pictures/
 
 # Media Keys
@@ -266,3 +266,8 @@ exec evolution
 exec vivaldi
 exec rocketchat-desktop
 exec keepass2
+
+# CloudStorage
+exec nextcloud
+exec megasync
+exec odrive
