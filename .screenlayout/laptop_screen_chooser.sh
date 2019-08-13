@@ -8,5 +8,5 @@ then
     # single screen
     $DIR/monitorSetupSingleLaptop.sh
 else
-    $DIR/monitorSetupDockingStation.sh
+    $DIR/monitorSetupDockingStationPrimaryBig.sh
 fi
