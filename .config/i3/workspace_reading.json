@@ -1,0 +1,56 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1320,
+       "width": 1180,
+       "x": 1330,
+       "y": 420
+    },
+    "name": "Polar: Document Repository",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^polar\\-bookshelf$",
+       // "instance": "^polar\\-bookshelf$",
+       // "title": "^Polar\\:\\ Document\\ Repository$",
+       // "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splith split container with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1728,
+               "width": 3072,
+               "x": 384,
+               "y": 216
+            },
+            "name": "Mendeley Desktop",
+            "percent": 1,
+            "swallows": [
+               {
+               // "class": "^Mendeley\\ Desktop$",
+               // "instance": "^mendeleydesktop$",
+               // "title": "^Mendeley\\ Desktop$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
