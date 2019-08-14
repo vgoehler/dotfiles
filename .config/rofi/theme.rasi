@@ -1,0 +1,142 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.5.1
+ **/
+* {
+    red:                         rgba ( 220, 50, 47, 100 % );
+    selected-active-foreground:  @background;
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    separatorcolor:              @foreground;
+    urgent-foreground:           @red;
+    alternate-urgent-background: @lightbg;
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    spacing:                     2;
+    border-color:                @foreground;
+    normal-background:           @background;
+    background-color:            rgba ( 0, 0, 0, 0 % );
+    alternate-active-background: @lightbg;
+    active-foreground:           @blue;
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    urgent-background:           @background;
+    alternate-normal-foreground: @foreground;
+    selected-active-background:  @blue;
+    background:                  rgba ( 253, 246, 227, 100 % );
+    selected-normal-foreground:  @lightbg;
+    active-background:           @background;
+    alternate-active-foreground: @blue;
+    alternate-normal-background: @lightbg;
+    foreground:                  rgba ( 0, 43, 54, 100 % );
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @background;
+    normal-foreground:           @foreground;
+    alternate-urgent-foreground: @red;
+    selected-normal-background:  @lightfg;
+}
+window {
+    padding:          5;
+    background-color: @background;
+    border:           1;
+}
+mainbox {
+    padding: 0;
+    border:  0;
+}
+message {
+    padding:      1px ;
+    border-color: @separatorcolor;
+    border:       2px dash 0px 0px ;
+}
+textbox {
+    text-color: @foreground;
+}
+listview {
+    padding:      2px 0px 0px ;
+    scrollbar:    true;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+}
+element {
+    padding: 1px ;
+    border:  0;
+}
+element normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: @normal-foreground;
+}
+sidebar {
+    border-color: @separatorcolor;
+    border:       2px dash 0px 0px ;
+}
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: @normal-foreground;
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+case-indicator {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+entry {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
+}
