@@ -284,6 +284,7 @@ exec evolution
 exec vivaldi
 exec rocketchat-desktop
 exec keepass2
+exec ssh-agent -s
 
 # CloudStorage
 exec nextcloud
