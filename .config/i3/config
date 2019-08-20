@@ -130,7 +130,7 @@ set $ws4 "4:Reading "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8:Gaming "
 set $ws9 "9:Security "
 set $ws10 "10:Music "
 
@@ -168,6 +168,7 @@ assign [title="Spotify Premium"] $ws10
 for_window [class="Spotify"] move to workspace $ws10
 assign [class="polar-bookshelf"] $ws4
 assign [class="Mendeley Desktop"] $ws4
+assign [class="Steam"] $ws8
 
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
@@ -178,6 +179,7 @@ workspace $ws1 output DP-2-3 eDP-1
 workspace $ws2 output DP-2-2 eDP-1
 workspace $ws3 output eDP-1
 workspace $ws4 output DP-2-2 eDP-1
+workspace $ws8 output DP-2-3 eDP-1
 workspace $ws9 output DP-2-2 eDP-1
 workspace $ws10 output eDP-1
 
@@ -248,8 +250,16 @@ bar {
     }
 }
 
-# my own bindings
-bindsym $mod+shift+x exec ~/sources/assorted-tools/activatelock.sh
+##################################################
+#           Locker
+##################################################
+# locker! uses i3lock in the script
+set $locker ~/sources/assorted-tools/activatelock.sh
+bindsym $mod+Shift+x exec $locker
+# use locker on system hibernate/sleep signals
+exec --np-startup-id xss-lock $locker
+
+# screenshoter -- awesome with on screen manipulation
 bindsym Print exec flameshot gui -p ~/Pictures/
 
 # Media Keys
