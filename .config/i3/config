@@ -274,22 +274,23 @@ bindsym XF86AudioPrev exec playerctl previous
 # default programs
 # exec program
 # exec_always program
-exec_always feh --bg-scale ~/Pictures/wallpaper/matrix_vader.jpg
-exec_always compton -f
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/matrix_vader.jpg
+exec_always --no-startup-id compton -f
 exec_always --no-startup-id numlockx on
 
 exec --no-startup-id nm-applet
+exec --np-startup-id blueman-applet
 exec spotify
 exec evolution
 exec vivaldi
 exec rocketchat-desktop
 exec keepass2
-exec ssh-agent -s
+exec --np-startup-id ssh-agent -s
 
 # CloudStorage
-exec nextcloud
-exec megasync
-exec odrive
+exec --np-startup-id nextcloud
+exec --np-startup-id megasync
+exec --np-startup-id odrive
 
 ##################################################
 #       Power Down Menu
