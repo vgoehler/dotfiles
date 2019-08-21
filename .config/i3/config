@@ -291,7 +291,7 @@ exec_always --no-startup-id compton -f -b --config ~/.config/compton.conf
 exec_always --no-startup-id numlockx on
 
 exec --no-startup-id nm-applet
-exec --np-startup-id blueman-applet
+exec blueman-applet
 exec spotify
 exec evolution
 exec vivaldi
@@ -300,9 +300,9 @@ exec keepass2
 exec --np-startup-id ssh-agent -s
 
 # CloudStorage
-exec --np-startup-id nextcloud
-exec --np-startup-id megasync
-exec --np-startup-id odrive
+exec nextcloud
+exec megasync
+exec odrive
 
 ##################################################
 #       Power Down Menu
