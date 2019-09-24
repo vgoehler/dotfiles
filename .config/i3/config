@@ -162,6 +162,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Vivaldi-stable"] $ws1
 assign [class="Evolution"] $ws2
 assign [class="Rocket.Chat"] $ws3
+assign [class="Signal"] $ws3
 assign [class="discord"] $ws3
 assign [class="Skype"] $ws3
 assign [class="KeePass2"] $ws9
@@ -296,6 +297,7 @@ exec spotify
 exec evolution
 exec vivaldi
 exec rocketchat-desktop
+exec signal-desktop
 exec keepass2
 exec --np-startup-id ssh-agent -s
 
