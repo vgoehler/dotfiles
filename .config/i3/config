@@ -118,6 +118,20 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+##################################################
+# Moving Workspaces
+##################################################
+#
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+Down move workspace to output down
+bindsym $mod+Ctrl+k move workspace to output up
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+l move workspace to output right
+bindsym $mod+Ctrl+Right move workspace to output right
+#
+
 # focus the child container
 #bindsym $mod+d focus child
 
