@@ -158,8 +158,9 @@ augroup END
 " spell checking
 set spelllang=en_us
 set complete+=kspell
-map <F8> :set spelllang=de<CR>
-map <leader><F8> :set spelllang=en_us<CR>
+map <F8> :set spelllang=de<CR>:hi SpellBad ctermfg=80 cterm=none<CR>
+map <leader><F8> :set spelllang=en_us<CR>:hi SpellBad ctermfg=80 cterm=none<CR>
+hi SpellBad ctermfg=80  cterm=none
 
 " git commits
 autocmd FileType gitcommit setlocal spell
