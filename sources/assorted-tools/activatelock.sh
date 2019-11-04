@@ -32,6 +32,10 @@ then
     done
 fi
 
+# pause mediaplayer
 playerctl pause
+
+# lock keepass
+/usr/bin/keepass2 --lock-all
 
 i3lock --ignore-empty-password --image=$TMPBG
