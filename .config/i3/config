@@ -186,6 +186,7 @@ for_window [class="Spotify"] move to workspace $ws10
 assign [class="polar-bookshelf"] $ws4
 assign [class="Mendeley Desktop"] $ws4
 assign [class="Steam"] $ws8
+assign [class="Slack"] $ws3
 
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
@@ -312,6 +313,7 @@ exec evolution
 exec vivaldi
 exec rocketchat-desktop
 exec signal-desktop
+exec slack
 exec keepass2
 exec --np-startup-id ssh-agent -s
 
