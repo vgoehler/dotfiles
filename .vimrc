@@ -143,18 +143,6 @@ augroup YAML
     au FileType yaml setlocal shiftwidth=2
 augroup END
 
-" latex
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-augroup LATEX
-    au!
-    au FileType tex set sw=2
-    au FileType tex set iskeyword+=:
-    au FileType tex setlocal spell
-    "call IMAP('FRA', "\\begin{frame}{<+HEADING+>}\<CR><++>\\end{frame}<++>", 'tex')
-    "use F9 for completion list in ref, cite etc.
-augroup END
-
 " spell checking
 set spelllang=en_us
 set complete+=kspell
