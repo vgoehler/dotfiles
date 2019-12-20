@@ -193,6 +193,7 @@ assign [class="IntelliJ"] $ws7
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+for_window [class="Arandr"] floating enable
 
 # workspace opens on screen
 workspace $ws1 output DP-2-3 eDP-1
