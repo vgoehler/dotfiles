@@ -3,6 +3,17 @@
 ICON=$HOME/.xlock/icon.png
 TMPBG=/tmp/screen.png
 
+# pause mediaplayer
+playerctl pause
+
+# lock keepass
+/usr/bin/keepass2 --lock-all
+
+if [[ -f $TMPBG ]]
+then
+    rm $TMPBG
+fi
+
 scrot $TMPBG
 
 convert $TMPBG -scale 10% -scale 1000%  $TMPBG
@@ -31,11 +42,5 @@ then
         convert $TMPBG $ICON -geometry +$PX+$PY -composite -matte  $TMPBG
     done
 fi
-
-# pause mediaplayer
-playerctl pause
-
-# lock keepass
-/usr/bin/keepass2 --lock-all
 
 i3lock --ignore-empty-password --image=$TMPBG
