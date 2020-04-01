@@ -189,6 +189,7 @@ assign [class="Steam"] $ws8
 assign [class="Slack"] $ws3
 assign [title="PyCharm"] $ws7
 assign [title="IntelliJ IDEA"] $ws7
+assign [class="WALC"] $ws3
 
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
@@ -316,9 +317,14 @@ exec blueman-applet
 exec spotify
 exec evolution
 exec vivaldi
+
+# Communication
 exec rocketchat-desktop
 exec signal-desktop
-exec slack
+#exec slack
+exec walc
+exec skype
+
 exec keepass2
 exec --np-startup-id ssh-agent -s
 
