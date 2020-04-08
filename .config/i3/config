@@ -189,7 +189,7 @@ assign [class="Steam"] $ws8
 assign [class="Slack"] $ws3
 assign [title="PyCharm"] $ws7
 assign [title="IntelliJ IDEA"] $ws7
-assign [class="WALC"] $ws3
+assign [class="walc"] $ws3
 
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
