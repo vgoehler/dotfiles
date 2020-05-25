@@ -2,11 +2,17 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 MULTI_SCREENS=$(xrandr | pcregrep -M "DP-2-2 connected(\n|.)*DP-2-3 connected")
+HOME_OFFICE=$(xrandr | pcregrep -M "DP-2-1 connected(\n|.)*DP-2-2 connected")
 
-if [ -z "$MULTI_SCREENS" ]
+if [ -n "$MULTI_SCREENS" ]
 then
+    # office setup: 1 big screen, left 1 small screen, further left laptop screen
+    $DIR/monitorSetupDockingStationPrimaryBig.sh
+elif [ -n "$HOME_OFFICE" ]
+then
+    # home office setup; 2 small screens, laptop off
+    $DIR/monitorSetupHomeOffice_closedLaptop.sh
+else
     # single screen
     $DIR/monitorSetupSingleLaptop.sh
-else
-    $DIR/monitorSetupDockingStationPrimaryBig.sh
 fi
