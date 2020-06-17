@@ -179,7 +179,7 @@ assign [class="Rocket.Chat"] $ws3
 assign [class="Signal"] $ws3
 assign [class="discord"] $ws3
 assign [class="Skype"] $ws3
-assign [class="KeePass2"] $ws9
+assign [class="KeePassXC"] $ws9
 assign [class="Spotify"] $ws10
 assign [title="Spotify Premium"] $ws10
 for_window [class="Spotify"] move to workspace $ws10
@@ -325,7 +325,7 @@ exec signal-desktop
 exec walc
 exec skype
 
-exec keepass2
+exec keepassxc
 exec --np-startup-id ssh-agent -s
 
 # CloudStorage
