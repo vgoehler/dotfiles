@@ -6,8 +6,9 @@ TMPBG=/tmp/screen.png
 # pause mediaplayer
 playerctl pause
 
-# lock keepass
-/usr/bin/keepass2 --lock-all
+# lock keepassxc
+# needs qdbus-qt5; qtchooser package; see this issue: https://github.com/keepassxreboot/keepassxc/issues/687
+qdbus org.keepassxc.KeePassXC.MainWindow /keepassxc org.keepassxc.MainWindow.lockAllDatabases
 
 if [[ -f $TMPBG ]]
 then
@@ -31,15 +32,18 @@ then
     SR=$(xrandr --query | grep ' connected' | sed -e 's/connected primary/connected/g' | cut -f3 -d' ')
     for RES in $SR
     do
-        # monitor position/offset
-        SRX=$(echo $RES | cut -d'x' -f 1)                   # x pos
-        SRY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 1)  # y pos
-        SROX=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 2) # x offset
-        SROY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 3) # y offset
-        PX=$(($SROX + $SRX/2 - $RX/2))
-        PY=$(($SROY + $SRY/2 - $RY/2))
+        if [ "$RES" != '(normal' ] # filter out deactivated screens
+        then
+            # monitor position/offset
+            SRX=$(echo $RES | cut -d'x' -f 1)                   # x pos
+            SRY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 1)  # y pos
+            SROX=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 2) # x offset
+            SROY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 3) # y offset
+            PX=$(($SROX + $SRX/2 - $RX/2))
+            PY=$(($SROY + $SRY/2 - $RY/2))
  
-        convert $TMPBG $ICON -geometry +$PX+$PY -composite -matte  $TMPBG
+            convert $TMPBG $ICON -geometry +$PX+$PY -composite -matte  $TMPBG
+        fi
     done
 fi
 
