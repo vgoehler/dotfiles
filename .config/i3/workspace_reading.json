@@ -40,13 +40,12 @@
                "x": 384,
                "y": 216
             },
-            "name": "Mendeley Desktop",
+            "name": "Mendeley Reference Manager",
             "percent": 1,
             "swallows": [
                {
-               // "class": "^Mendeley\\ Desktop$",
-               // "instance": "^mendeleydesktop$",
-               // "title": "^Mendeley\\ Desktop$"
+               // "class": "^Mendeley\\ Reference\\ Manager$",
+               // "title": "^Mendeley\\ Reference\\ Manager$"
                }
             ],
             "type": "con"

@@ -185,6 +185,7 @@ assign [title="Spotify Premium"] $ws10
 for_window [class="Spotify"] move to workspace $ws10
 assign [class="polar-bookshelf"] $ws4
 assign [class="Mendeley Desktop"] $ws4
+assign [class="Mendeley Reference Manager"] $ws4
 assign [class="Steam"] $ws8
 assign [class="Slack"] $ws3
 assign [title="PyCharm"] $ws7
