@@ -22,7 +22,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'othree/xml.vim'
 
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'plasticboy/vim-markdown'
+"Plugin 'masukomi/vim-markdown-folding'
 
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
@@ -31,10 +32,13 @@ Plugin 'vim-latex/vim-latex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+
+if has("autocmd")
+    filetype plugin indent on    " required
+    " To ignore plugin indent changes, instead use:
+    "filetype plugin on
+endif
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -152,3 +156,6 @@ hi SpellBad ctermfg=80  cterm=none
 
 " git commits
 autocmd FileType gitcommit setlocal spell
+
+" pandoc
+:let g:pandoc#folding#fold_yaml=1
