@@ -361,5 +361,5 @@ bindsym $mod+p exec ~/sources/assorted-tools/apply_i3_layout_and_start_paper_sof
 bindsym $mod+Shift+f exec sakura -x ranger
 
 #### randr scripts
-bindsym $mod+plus exec ~/.screenlayout/monitorSetupDockingStationPrimaryBig.sh
+bindsym $mod+plus exec ~/.screenlayout/monitorSetupDockingStation.sh
 bindsym $mod+minus exec ~/.screenlayout/monitorSetupSingleLaptop.sh
