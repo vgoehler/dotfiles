@@ -48,11 +48,17 @@ font pango:System San Francisco Display 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# FOLDERS
+#
+set $screenscripts ~/.screenlayout
+set $scripts ~/sources/assorted-tools
 
 ##################################################
 #   Display Setup !
 ##################################################
-exec ~/.screenlayout/laptop_screen_chooser.sh
+
+# detect multi monitor and use favored setup
+exec $screenscripts/laptop_screen_chooser.sh;$scripts/feh_set_bg.sh
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
@@ -280,7 +286,7 @@ bar {
 #           Locker
 ##################################################
 # locker! uses i3lock in the script
-set $locker ~/sources/assorted-tools/activatelock.sh
+set $locker $scripts/activatelock.sh
 bindsym $mod+Shift+x exec $locker
 # use locker on system hibernate/sleep signals
 exec --np-startup-id xss-lock $locker
@@ -299,7 +305,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /home/vgoehler/sources/assorted-tools/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec $scripts/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -310,7 +316,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # default programs
 # exec program
 # exec_always program
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper/matrix_vader.jpg
+exec_always --no-startup-id $scripts/feh_set_bg.sh
 exec_always --no-startup-id compton -f -b --config ~/.config/compton.conf
 exec_always --no-startup-id numlockx on
 
@@ -342,10 +348,10 @@ exec odrive
 # Restart or shutdown or suspend by using WinKey+Pause key with menu to select option
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/sources/assorted-tools/activatelock.sh, mode "default"
+    bindsym l exec --no-startup-id $scripts/activatelock.sh, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id ~/sources/assorted-tools/activatelock.sh && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id ~/sources/assorted-tools/activatelock.sh && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id $scripts/activatelock.sh && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $scripts/activatelock.sh && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 # back to normal: Enter or Escape
@@ -356,11 +362,11 @@ bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+XF86Calculator mode "$mode_system"
 
 #### paper software
-bindsym $mod+p exec ~/sources/assorted-tools/apply_i3_layout_and_start_paper_software.sh
+bindsym $mod+p exec $scripts/apply_i3_layout_and_start_paper_software.sh
 
 #### ranger file manager
 bindsym $mod+Shift+f exec sakura -x ranger
 
 #### randr scripts
-bindsym $mod+plus exec ~/.screenlayout/monitorSetupDockingStation.sh
-bindsym $mod+minus exec ~/.screenlayout/monitorSetupSingleLaptop.sh
+bindsym $mod+plus exec $screenscripts/monitorSetupDockingStation.sh;$scripts/feh_set_bg.sh
+bindsym $mod+minus exec $screenscripts/monitorSetupSingleLaptop.sh;$scripts/feh_set_bg.sh
