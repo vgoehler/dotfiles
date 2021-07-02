@@ -317,7 +317,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # exec program
 # exec_always program
 exec_always --no-startup-id $scripts/feh_set_bg.sh
-exec_always --no-startup-id compton -f -b --config ~/.config/compton.conf
+exec_always --no-startup-id picom -f -b --config ~/.config/picom.conf
 exec_always --no-startup-id numlockx on
 
 exec --no-startup-id nm-applet
