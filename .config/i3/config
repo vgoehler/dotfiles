@@ -189,7 +189,6 @@ assign [class="KeePassXC"] $ws9
 assign [class="Spotify"] $ws10
 assign [title="Spotify Premium"] $ws10
 for_window [class="Spotify"] move to workspace $ws10
-assign [class="polar-bookshelf"] $ws4
 assign [class="Mendeley Desktop"] $ws4
 assign [class="Mendeley Reference Manager"] $ws4
 assign [class="Steam"] $ws8
@@ -197,6 +196,7 @@ assign [class="Slack"] $ws3
 assign [title="PyCharm"] $ws7
 assign [title="IntelliJ IDEA"] $ws7
 assign [class="walc"] $ws3
+assign [class="TelegramDesktop"] $ws3
 
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
@@ -327,9 +327,10 @@ exec evolution
 exec vivaldi
 
 # Communication
+exec --no-startup-id "i3-msg 'append_layout ~/.config/i3/workspace_chat.json'"
 exec rocketchat-desktop
 exec signal-desktop
-#exec slack
+exec telegram-desktop
 exec walc
 exec skype
 
