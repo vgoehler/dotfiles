@@ -368,5 +368,5 @@ bindsym $mod+p exec $scripts/apply_i3_layout_and_start_paper_software.sh
 bindsym $mod+Shift+f exec sakura -x ranger
 
 #### randr scripts
-bindsym $mod+plus exec $screenscripts/monitorSetupDockingStation.sh;$scripts/feh_set_bg.sh
-bindsym $mod+minus exec $screenscripts/monitorSetupSingleLaptop.sh;$scripts/feh_set_bg.sh
+bindsym $mod+plus exec $screenscripts/monitorSetupDockingStation.sh && $scripts/feh_set_bg.sh
+bindsym $mod+minus exec $screenscripts/monitorSetupSingleLaptop.sh && $scripts/feh_set_bg.sh
