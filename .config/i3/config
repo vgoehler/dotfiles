@@ -327,11 +327,10 @@ exec evolution
 exec vivaldi
 
 # Communication
-exec --no-startup-id "i3-msg 'append_layout ~/.config/i3/workspace_chat.json'"
+exec walc
 exec rocketchat-desktop
 exec signal-desktop
 exec telegram-desktop
-exec walc
 exec skype
 
 exec keepassxc
