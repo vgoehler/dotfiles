@@ -286,10 +286,9 @@ bar {
 #           Locker
 ##################################################
 # locker! uses i3lock in the script
-set $locker $scripts/activatelock.sh
-bindsym $mod+Shift+x exec $locker
+bindsym $mod+Shift+x exec $scripts/activatelock.sh
 # use locker on system hibernate/sleep signals
-exec --np-startup-id xss-lock $locker
+exec --np-startup-id xss-lock $scripts/activatelock.sh
 
 # screenshoter -- awesome with on screen manipulation
 bindsym Print exec flameshot gui -p ~/Pictures/
