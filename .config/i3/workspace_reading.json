@@ -1,32 +1,10 @@
 // vim:ts=4:sw=4:et
 {
-    "border": "normal",
-    "current_border_width": 2,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 1320,
-       "width": 1180,
-       "x": 1330,
-       "y": 420
-    },
-    "name": "Polar: Document Repository",
-    "percent": 0.5,
-    "swallows": [
-       {
-       // "class": "^polar\\-bookshelf$",
-       // "instance": "^polar\\-bookshelf$",
-       // "title": "^Polar\\:\\ Document\\ Repository$",
-       // "window_role": "^browser\\-window$"
-       }
-    ],
-    "type": "con"
-}
-
-{
     // splith split container with 1 children
     "border": "normal",
     "floating": "auto_off",
     "layout": "splith",
+    "marks": [],
     "percent": 0.5,
     "type": "con",
     "nodes": [
@@ -35,21 +13,47 @@
             "current_border_width": 2,
             "floating": "auto_off",
             "geometry": {
-               "height": 1728,
-               "width": 3072,
-               "x": 384,
-               "y": 216
+               "height": 864,
+               "width": 1536,
+               "x": 192,
+               "y": 108
             },
-            "name": "Mendeley Reference Manager",
+            "marks": [],
+            "name": "Mendeley Desktop",
             "percent": 1,
             "swallows": [
                {
-               // "class": "^Mendeley\\ Reference\\ Manager$",
-               // "title": "^Mendeley\\ Reference\\ Manager$"
+               // "class": "^Mendeley\\ Desktop$",
+               // "instance": "^mendeleydesktop$",
+               // "title": "^Mendeley\\ Desktop$"
                }
             ],
             "type": "con"
         }
     ]
+}
+
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 560,
+       "y": 240
+    },
+    "marks": [],
+    "name": "Mendeley Reference Manager",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^Mendeley\\ Reference\\ Manager$",
+       // "instance": "^mendeley\\ reference\\ manager$",
+       // "title": "^Mendeley\\ Reference\\ Manager$",
+       // "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
 }
 
