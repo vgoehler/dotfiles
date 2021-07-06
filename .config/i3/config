@@ -321,6 +321,7 @@ exec_always --no-startup-id numlockx on
 
 exec --no-startup-id nm-applet
 exec blueman-applet
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec spotify
 exec evolution
 exec vivaldi
