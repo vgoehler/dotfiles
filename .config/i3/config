@@ -200,8 +200,9 @@ assign [title="PyCharm"] $ws7
 assign [title="IntelliJ IDEA"] $ws7
 assign [class="walc"] $ws3
 assign [class="TelegramDesktop"] $ws3
-assign [class="chromium" title="^The Wall.*"] $wsW
-for_window [class="chromium" title="^The Wall.*"] move to workspace $wsW
+assign [class="Chromium" title="^Murals"] $wsW
+for_window [class="Chromium" title="^Murals"] move to workspace $wsW
+for_window [class="Chromium" title="^The Wall"] move to workspace $wsW
 
 # float mode for some dialogs
 for_window [window_role="pop-up"] floating enable
@@ -331,6 +332,7 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec spotify
 exec evolution
 exec vivaldi
+exec chromium app.mural.co
 
 # Communication
 exec walc
