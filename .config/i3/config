@@ -184,6 +184,7 @@ bindsym $mod+Shift+dead_circumflex move container to workspace $wsW
 # assigning applications to workspaces
 assign [class="Vivaldi-stable"] $ws1
 assign [class="Thunderbird"] $ws2
+for_window [class="Thunderbird"] move to workspace $ws2
 assign [class="Rocket.Chat"] $ws3
 assign [class="Signal"] $ws3
 assign [class="discord"] $ws3
