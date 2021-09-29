@@ -183,7 +183,7 @@ bindsym $mod+Shift+dead_circumflex move container to workspace $wsW
 
 # assigning applications to workspaces
 assign [class="Vivaldi-stable"] $ws1
-assign [class="Evolution"] $ws2
+assign [class="Thunderbird"] $ws2
 assign [class="Rocket.Chat"] $ws3
 assign [class="Signal"] $ws3
 assign [class="discord"] $ws3
@@ -330,7 +330,7 @@ exec --no-startup-id nm-applet
 exec blueman-applet
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec spotify
-exec evolution
+exec thunderbird
 exec vivaldi
 exec chromium app.mural.co
 
