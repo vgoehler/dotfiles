@@ -343,7 +343,7 @@ exec telegram-desktop
 exec skype
 
 exec keepassxc
-exec --np-startup-id ssh-agent -s
+exec --no-startup-id ssh-agent -s
 
 # CloudStorage
 exec nextcloud
