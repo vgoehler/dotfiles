@@ -10,6 +10,9 @@ playerctl pause
 # needs qdbus-qt5; qtchooser package; see this issue: https://github.com/keepassxreboot/keepassxc/issues/687
 qdbus org.keepassxc.KeePassXC.MainWindow /keepassxc org.keepassxc.MainWindow.lockAllDatabases
 
+# deactivate notifier
+dunstctl set-paused toggle
+
 if [[ -f $TMPBG ]]
 then
     rm $TMPBG
@@ -48,3 +51,15 @@ then
 fi
 
 i3lock --ignore-empty-password --image=$TMPBG
+
+# reactivate notifier after i3lock has been terminated
+while :
+do
+    sleep 10
+    i3_active=$(ps o comm | grep i3lock)
+    if [[ -z $i3_active ]]
+    then
+        dunstctl set-paused toggle
+        break
+    fi
+done
