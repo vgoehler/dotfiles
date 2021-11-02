@@ -307,9 +307,9 @@ bindsym Print exec flameshot gui -p ~/Pictures/
 
 # Media Keys
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%  && pkill -RTMIN+1 i3blocks #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle  && pkill -RTMIN+1 i3blocks # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id $scripts/change-volume.sh volume + && pkill -RTMIN+1 i3blocks #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id $scripts/change-volume.sh volume - && pkill -RTMIN+1 i3blocks #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id $scripts/change-volume.sh mute && pkill -RTMIN+1 i3blocks # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
