@@ -213,6 +213,7 @@ for_window [class="jetbrains-idea" title="win0"] floating enable
 for_window [class="jetbrains-pycharm" title="win0"] floating enable
 for_window [title="Bluetooth Devices"] floating enable
 for_window [instance="org.gnome.Nautilus"] floating enable
+for_window [class="org.prelle.genesis.Genesis5Main"] floating enable
 
 # workspace opens on screen
 workspace $ws1 output DP-2-3 eDP-1
