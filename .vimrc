@@ -69,6 +69,9 @@ set showmatch
 " blink count
 set mat=2
 
+" make shortcut
+nmap <leader>ll :make<cr>
+
 " no bells on error
 set noerrorbells
 set novisualbell
