@@ -6,3 +6,5 @@ set -x WORKON_HOME $HOME/.virtualenvs
 bash /usr/local/bin/virtualenvwrapper.sh
 
 set PATH $HOME/.npm-global/bin $PATH
+
+fish_ssh_agent
