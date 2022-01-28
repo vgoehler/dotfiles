@@ -1,7 +1,10 @@
 #!/bin/bash
-#Source: https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
-if synclient -l | grep "TouchpadOff .*=.*0" ; then
-    synclient TouchpadOff=1 ;
-else
-    synclient TouchpadOff=0 ;
+
+TOUCHPAD_ID=13
+ENABLED=$(xinput list-props $TOUCHPAD_ID | grep "Device Enabled.*:.*1")
+
+if [[ -z $ENABLED ]] ; then
+	xinput set-prop $TOUCHPAD_ID "Device Enabled" 1 ;
+else	
+	xinput set-prop $TOUCHPAD_ID "Device Enabled" 0 ;
 fi
