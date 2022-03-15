@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exit -1
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 MULTI_SCREENS=$(xrandr | pcregrep -M "DP-2-2 connected(\n|.)*DP-2-3 connected")
 HOME_OFFICE=$(xrandr | pcregrep -M "DP-2-1 connected(\n|.)*DP-2-2 connected")
