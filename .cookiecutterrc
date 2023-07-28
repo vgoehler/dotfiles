@@ -1,6 +1,8 @@
 default_context:
-    full_name: "Volker G Göhler"
+    full_name: "Volker Göhler"
     email: "volker.goehler@informatik.tu-freiberg.de"
+    author_email: "volker.goehler@informatik.tu-freiberg.de"
     website: "https://github.com/vgoehler"
     repo_username: "vgoehler"
     repo_hosting_domain: "github.com"
+    github_username: "vgoehler"
