@@ -8,3 +8,11 @@ bash $HOME/.local/bin/virtualenvwrapper.sh
 set PATH $HOME/.npm-global/bin $PATH
 set PATH $HOME/.local/bin $PATH
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/vgoehler/Applications/anaconda3/bin/conda
+    eval /home/vgoehler/Applications/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
+
