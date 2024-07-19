@@ -32,6 +32,8 @@ Plugin 'vim-latex/vim-latex'
 
 Plugin 'dense-analysis/ale'
 
+Plugin 'tyrannicaltoucan/vim-deep-space'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -115,8 +117,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
 "python del powerline_setup
+
+
 set t_Co=256
-colorscheme delek
+set background=dark
+set termguicolors
+colorscheme deep-space
 
 " show mode change
 set laststatus=2
