@@ -17,3 +17,4 @@ if test -f /home/vgoehler/Applications/anaconda3/bin/conda
 end
 # <<< conda initialize <<<
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
