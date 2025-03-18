@@ -17,4 +17,5 @@ if test -f /home/vgoehler/Applications/anaconda3/bin/conda
 end
 # <<< conda initialize <<<
 
-/home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+# this sometimes fails??? out of scripts only???
+# /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
