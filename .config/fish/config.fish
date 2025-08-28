@@ -19,3 +19,8 @@ end
 
 # this sometimes fails??? out of scripts only???
 # /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/vgoehler/.lmstudio/bin
+# End of LM Studio CLI section
+
