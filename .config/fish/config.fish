@@ -10,6 +10,7 @@ set PATH $HOME/.local/bin $PATH
 umask 002
 
 set -x CHAT_AI_KEY (cat ~/.chatai_api_key)
+set -x DEEPL_KEY (cat ~/.deepL_api_key)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
