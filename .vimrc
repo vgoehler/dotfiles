@@ -34,6 +34,8 @@ Plugin 'dense-analysis/ale'
 
 Plugin 'tyrannicaltoucan/vim-deep-space'
 
+Plugin 'quarto-dev/quarto-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
