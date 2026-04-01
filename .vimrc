@@ -178,7 +178,6 @@ autocmd FileType gitcommit setlocal spell
 " ----------------------------------------
 autocmd FileType quarto setlocal shiftwidth=2 softtabstop=2 expandtab indentexpr=
 
-" Use makeprg so :make runs your default target (= dev)
 set makeprg=remake
 
 set errorformat=%E%f:%l:\ %m,%W%f:%l:\ %m,%C%m
@@ -189,38 +188,17 @@ set errorformat=%E%f:%l:\ %m,%W%f:%l:\ %m,%C%m
 
 " Default development build
 command! QuartoDev silent make
-
 " Full publication build
 command! QuartoPublish silent !remake publish
-
-" Build current chapter only, using your dev profile
-command! QuartoChapter silent execute '!remake chapter FILE=' . shellescape(expand('%:p'))
+" Fix
+autocmd QuickFixCmdPost make redraw!
 
 " ----------------------------------------
 " Key mappings
 " ----------------------------------------
 
-" <leader>qd  -> dev build
 nnoremap <silent> <leader>qd :QuartoDev<CR>
-
-" <leader>qp  -> publish build
 nnoremap <silent> <leader>qp :QuartoPublish<CR>
 
-" <leader>qc  -> current chapter only
-nnoremap <silent> <leader>qc :QuartoChapter<CR>
-
-" Open quickfix after :make
 nnoremap <silent> <leader>qq :copen<CR>
-
-" Close quickfix
 nnoremap <silent> <leader>qx :cclose<CR>
-
-" ----------------------------------------
-" Render on save for Quarto files
-" ----------------------------------------
-
-augroup quarto_render_on_save
-  autocmd!
-  autocmd BufWritePost *.qmd silent QuartoChapter
-augroup END
-
