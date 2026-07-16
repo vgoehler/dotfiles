@@ -1,0 +1,81 @@
+# Whitelist-style gitignore: ignore everything by default, then
+# explicitly un-ignore only the dotfiles/config paths meant to be
+# tracked in this repo. To add a new file later, add a matching
+# "!/path/to/file" line (and un-ignore any parent dirs first).
+/*
+
+# --- allowed top-level dirs (must un-ignore the dir itself first) ---
+!/.config/
+!/.screenlayout/
+!/.vim/
+!/.xlock/
+!/sources/
+
+# --- allowed files at repo root ---
+!/.bashrc
+!/.cookiecutterrc
+!/.gitignore
+!/.latexmkrc
+!/.stalonetrayrc
+!/.vimrc
+
+# --- .config ---
+/.config/*
+!/.config/fish/
+!/.config/i3/
+!/.config/picom.conf
+!/.config/rofi/
+
+/.config/fish/*
+!/.config/fish/brew.fish
+!/.config/fish/conf.d/
+!/.config/fish/config.fish
+!/.config/fish/fish_variables
+!/.config/fish/functions/
+
+/.config/fish/conf.d/*
+!/.config/fish/conf.d/omf.fish
+
+/.config/fish/functions/*
+!/.config/fish/functions/fish_prompt.fish
+!/.config/fish/functions/libreoffice.fish
+!/.config/fish/functions/okular.fish
+
+/.config/i3/*
+!/.config/i3/config
+!/.config/i3/i3blocks-spotify-blocklet.cfg
+!/.config/i3/i3blocks.conf
+!/.config/i3/workspace_reading.json
+
+/.config/rofi/*
+!/.config/rofi/config.rasi
+!/.config/rofi/theme.rasi
+
+# --- .screenlayout ---
+/.screenlayout/*
+!/.screenlayout/laptop_screen_chooser.sh
+!/.screenlayout/monitorSetupDockingStation.sh
+!/.screenlayout/monitorSetupDockingStation_closedLaptop.sh
+!/.screenlayout/monitorSetupHomeOffice.sh
+!/.screenlayout/monitorSetupHomeOffice_closedLaptop.sh
+!/.screenlayout/monitorSetupSingleLaptop.sh
+
+# --- .vim ---
+/.vim/*
+!/.vim/ftplugin/
+/.vim/ftplugin/*
+!/.vim/ftplugin/tex.vim
+
+# --- .xlock ---
+/.xlock/*
+!/.xlock/icon.png
+
+# --- sources ---
+/sources/*
+!/sources/assorted-tools/
+/sources/assorted-tools/*
+!/sources/assorted-tools/activatelock.sh
+!/sources/assorted-tools/apply_i3_layout_and_start_paper_software.sh
+!/sources/assorted-tools/change-volume.sh
+!/sources/assorted-tools/snap_upgradeable_list.sh
+!/sources/assorted-tools/toggletouchpad.sh
