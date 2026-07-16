@@ -9,7 +9,6 @@
 !/.screenlayout/
 !/.vim/
 !/.xlock/
-!/sources/
 
 # --- allowed files at repo root ---
 !/.bashrc
@@ -75,12 +74,5 @@
 /.xlock/*
 !/.xlock/icon.png
 
-# --- sources ---
-/sources/*
-!/sources/assorted-tools/
-/sources/assorted-tools/*
-!/sources/assorted-tools/activatelock.sh
-!/sources/assorted-tools/apply_i3_layout_and_start_paper_software.sh
-!/sources/assorted-tools/change-volume.sh
-!/sources/assorted-tools/snap_upgradeable_list.sh
-!/sources/assorted-tools/toggletouchpad.sh
+# Note: /sources/ is intentionally NOT un-ignored here. sources/assorted-tools
+# is its own separate git repo and must stay untouched by this one.
