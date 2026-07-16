@@ -1,0 +1,21 @@
+[user]
+	name = Volker Goehler
+	email = volker.goehler@informatik.tu-freiberg.de
+[merge]
+	tool = meld
+[core]
+	excludesfile = ~/.local/share/git/.gitignore
+	autocrlf = input
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = /home/vgoehler/sources/python/emotion_conveyor
+[mergetool "meld"]
+	path = /usr/bin/meld
+[credential]
+	helper = keepassxc --git-groups

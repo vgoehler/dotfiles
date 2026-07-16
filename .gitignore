@@ -14,6 +14,7 @@
 # --- allowed files at repo root ---
 !/.bashrc
 !/.cookiecutterrc
+!/.gitconfig
 !/.gitignore
 !/.latexmkrc
 !/.stalonetrayrc
@@ -25,6 +26,7 @@
 !/.config/i3/
 !/.config/picom.conf
 !/.config/rofi/
+!/.config/sway/
 
 /.config/fish/*
 !/.config/fish/brew.fish
@@ -50,6 +52,9 @@
 /.config/rofi/*
 !/.config/rofi/config.rasi
 !/.config/rofi/theme.rasi
+
+/.config/sway/*
+!/.config/sway/config
 
 # --- .screenlayout ---
 /.screenlayout/*
